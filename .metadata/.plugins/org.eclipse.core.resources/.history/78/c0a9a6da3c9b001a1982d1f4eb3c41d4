@@ -1,0 +1,45 @@
+package com.Ebanking.Master;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class FlipkartMouseHover {
+	
+	
+
+	public static void main(String[] args) throws IOException {
+		
+
+	
+		//private static final File TakesScreenshot = null;
+
+	WebDriver driver=new FirefoxDriver();
+		
+		driver.get("http://flipkart.com");
+		
+		Actions act=new Actions(driver);
+		
+		act.moveToElement(driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[2]/div/ul/li[3]/span"))).build().perform();
+		
+
+		driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[2]/div/ul/li[3]/ul/li/ul/li[2]/ul/li[3]/a")).click();
+
+		
+		
+		
+		
+		
+		
+		
+		
+		driver.close();
+	}
+
+	
+	
+
+}

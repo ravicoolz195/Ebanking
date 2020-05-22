@@ -1,0 +1,2 @@
+	@FindBy(id="BtnNewBR")
+	WebElement newbrcreation;

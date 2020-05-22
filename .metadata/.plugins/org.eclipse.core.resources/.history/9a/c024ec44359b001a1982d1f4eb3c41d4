@@ -1,0 +1,44 @@
+package com.Ebanking.Master;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Screeenshot {
+
+	public static void main(String[] args) throws IOException {
+		
+
+	
+	
+		WebDriver driver=new FirefoxDriver();
+		
+		driver.get("http://183.82.100.55/ranford2/home.aspx");
+		
+		
+		
+		snap(driver, "openapp");
+		
+		
+		driver.close();
+	}
+	
+	
+	
+	
+	public static void snap(WebDriver driver,String screename) throws IOException {
+		
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("E:\\Ebanking\\RanfordBasicscriptTestng\\src\\com\\Ebanking\\Results"+screename+".jpg"));
+		
+		
+	}
+	
+	
+	
+}

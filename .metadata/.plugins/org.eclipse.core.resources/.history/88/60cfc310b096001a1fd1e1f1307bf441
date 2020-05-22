@@ -1,0 +1,42 @@
+package com.Ebanking.Master;
+
+import java.io.FileInputStream;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Sgrid {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Library lb=new Library();
+		
+
+FileInputStream 		fis=new FileInputStream("E:\\Ebanking\\RanfordBasicscript\\src\\com\\Ebanking\\Properties\\Rep.properties");
+
+		
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\RAVI TEJA\\Desktop\\geckodriver.exe");
+		WebDriver driver=new FirefoxDriver();
+		driver.get("http://183.82.100.55/ranford2/");
+
+
+		driver.findElement(By.id(pro.getProperty("usname"))).sendKeys(uname);
+		driver.findElement(By.id(pro.getProperty("pwd"))).sendKeys(pass);
+		driver.findElement(By.id(pro.getProperty("lgn"))).click();
+
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

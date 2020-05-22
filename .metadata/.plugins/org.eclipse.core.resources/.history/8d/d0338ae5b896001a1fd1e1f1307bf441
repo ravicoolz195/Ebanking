@@ -1,0 +1,70 @@
+package com.Ebanking.Master;
+import java.io.IOException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class Sgrid {
+	
+	
+	DesiredCapabilities cap=null;
+	public static void main(String[] args) throws IOException {
+
+		
+		
+		DesiredCapabilities cap=null;
+
+		
+		//Library lb=new Library();
+
+//FileInputStream fis=new FileInputStream("E:\\Ebanking\\RanfordBasicscript\\src\\com\\Ebanking\\Properties\\Rep.properties");
+
+		
+	//	System.setProperty("webdriver.gecko.driver", "C:\\Users\\RAVI TEJA\\Desktop\\geckodriver.exe");
+		
+		/*
+		driver=new FirefoxDriver();
+		driver.get("http://183.82.100.55/ranford2/");
+
+
+		driver.findElement(By.id("txtuId")).sendKeys("Admin");
+		driver.findElement(By.id("txtPword")).sendKeys("M1ndq");
+		driver.findElement(By.id("login")).click();
+*/
+		
+		cap=new DesiredCapabilities();
+		cap.setPlatform(Platform.ANY);
+		
+		RemoteWebDriver driver=new RemoteWebDriver(new URL("http://192.168.0.5:4444/wd/hub"), cap);
+		
+		
+
+		driver.manage().window().maximize();
+		
+		WebDriver driver=new FirefoxDriver();
+		driver.get("http://183.82.100.55/ranford2/");
+		
+		
+	
+		
+		driver.findElement(By.id("txtuId")).sendKeys("Admin");
+		driver.findElement(By.id("txtPword")).sendKeys("M1ndq");
+		driver.findElement(By.id("login")).click();
+
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}
